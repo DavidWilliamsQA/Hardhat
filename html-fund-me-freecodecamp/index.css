@@ -1,0 +1,11 @@
+.outer {
+    text-align: center;
+    justify-content: center;
+}
+.inner {
+    display: inline-block;
+    height: 150px;
+    margin: 10px;
+    width: 20%;
+    justify-content: center;
+}

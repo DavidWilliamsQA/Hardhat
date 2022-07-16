@@ -5,6 +5,7 @@ const connectButton = document.getElementById("connectButton")
 const withdrawButton = document.getElementById("withdrawButton")
 const fundButton = document.getElementById("fundButton")
 const balanceButton = document.getElementById("balanceButton")
+const balanceVisualButton = document.getElementById("balanceVisual")
 connectButton.onclick = connect
 withdrawButton.onclick = withdraw
 fundButton.onclick = fund
@@ -68,6 +69,9 @@ async function getBalance() {
         try {
             const balance = await provider.getBalance(contractAddress)
             console.log(ethers.utils.formatEther(balance))
+            balanceVisualButton.innerHTML = `${ethers.utils.formatEther(
+                balance
+            )}`
         } catch (error) {
             console.log(error)
         }
